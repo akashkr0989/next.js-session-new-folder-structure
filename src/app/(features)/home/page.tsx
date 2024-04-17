@@ -3,7 +3,7 @@ import { HomePageCategoryWiseInterface } from "@/interfaces/homePage.interface";
 // import { useSession } from "next-auth/react";
 import { createContext, useEffect, useState } from "react";
 import useHomeAPICall from "./useHomeHelper";
-import { Button, Container, Skeleton } from "@mui/material";
+import { Button, CircularProgress, Container, Skeleton } from "@mui/material";
 import styles from "./home.module.scss";
 import CardsListing from "@/shared/components/cardsList/page";
 import { useRouter } from "next/navigation";
@@ -57,7 +57,14 @@ const HomePage: React.FC = () => {
         </>
       ) : (
         <>
-          <h1>Loading...</h1>
+        <div className={styles.loaderContainer}>
+          <CircularProgress color="secondary" />
+          <CircularProgress color="success" />
+          <CircularProgress color="inherit" />
+          <CircularProgress color="success" />
+          <CircularProgress color="inherit" />
+
+        </div>
         </>
       )}
     </>
