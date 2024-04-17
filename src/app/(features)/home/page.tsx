@@ -59,10 +59,10 @@ const HomePage: React.FC = () => {
         <>
         <div className={styles.loaderContainer}>
           <CircularProgress color="secondary" />
-          <CircularProgress color="success" />
+          {/* <CircularProgress color="success" />
           <CircularProgress color="inherit" />
           <CircularProgress color="success" />
-          <CircularProgress color="inherit" />
+          <CircularProgress color="inherit" /> */}
 
         </div>
         </>
