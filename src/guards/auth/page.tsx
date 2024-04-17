@@ -1,5 +1,4 @@
 "use client"
-
 import { checkAuthentication } from '@/services/utility.service';
 import { useRouter } from 'next/navigation';
 // AuthGuard.tsx
@@ -20,6 +19,19 @@ const AuthGuard: React.FC<any> = ({ children }) => {
 };
 
 export default AuthGuard;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -58,6 +70,35 @@ export default AuthGuard;
 //   // if (!isToken) {
 //   //   return <div>Loading...</div>;
 //   // }
+
+//   return <>{children}</>;
+// };
+
+// export default AuthGuard;
+
+
+
+// ----------------------------------------------------
+
+// import { checkAuthentication } from '@/services/utility.service';
+// import { usePathname, useRouter } from 'next/navigation';
+// import { useEffect } from 'react';
+
+// const AuthGuard: React.FC<any> = ({ children }) => {
+//   const router = useRouter();
+//   const pathname = usePathname()
+
+
+//   // Check if user is authenticated
+//   useEffect(() => {
+//     console.log(router)
+//     const isAuthenticated = checkAuthentication(); // Implement your authentication logic here
+//     const currentRoute = pathname;
+
+//     if (!isAuthenticated && currentRoute !== '/auth/login' && currentRoute !== '/auth/forgot-password') {
+//       router.push('/auth/login'); // Redirect to login page if user is not authenticated and not already on the login page or forgot password page
+//     }
+//   }, [pathname]); // Adding router.pathname as a dependency to trigger redirection when the route changes
 
 //   return <>{children}</>;
 // };

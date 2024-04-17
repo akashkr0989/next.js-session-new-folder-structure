@@ -30,7 +30,7 @@ export default function MyApp({
         </Head>
         <body>
         <Header />
-        <Container maxWidth="xl" style={{ paddingTop: 64, paddingBottom: 20 }}>
+        <Container maxWidth={false} style={{ padding: "3.5rem" }}>
           <AuthGuard>
           {children}
           </AuthGuard>
